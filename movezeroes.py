@@ -1,4 +1,3 @@
-print("FILE IS RUNNING")
 from typing import List
 
 class Solution:
