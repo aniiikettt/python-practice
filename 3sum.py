@@ -31,3 +31,11 @@ class Solution:
                     
                     left += 1
                     right -= 1
+
+                elif total < 0:
+                    left += 1     
+
+                else:
+                    right -= 1    
+
+        return result
