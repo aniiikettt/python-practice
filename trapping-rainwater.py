@@ -5,3 +5,8 @@ class Solution:
         n = len(height)
         if n == 0:
             return 0
+        
+        left_max = [0] * n
+        left_max[0] = height[0]
+        for i in range(1 , n):
+            left_max[i] = max(left_max[i-1], height[i])
