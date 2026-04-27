@@ -15,3 +15,9 @@ class Solution:
         right_max[n-1] = height[n-1]
         for i in range(n-2, -1, -1):
             right_max[i] = max(right_max[i+1], height[i])
+
+        total_water = 0
+        for i in range(n):
+            water = min(left_max[i], right_max[i]) - height[i]
+            total_water += water
+
