@@ -22,9 +22,9 @@ class Solution:
                 current_sum -= left_num
                 left += 1
 
-            # Step 3: Window is exactly size k → check if valid
+            
             if right - left + 1 == k:
-                if len(freq) == k:        # All elements distinct!
+                if len(freq) == k:        
                     max_sum = max(max_sum, current_sum)
 
         return max_sum
