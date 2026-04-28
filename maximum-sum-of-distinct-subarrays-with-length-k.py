@@ -8,7 +8,7 @@ class Solution:
 
         for right in range(len(nums)):
             
-            # Step 1: Add new right element to window
+            
             num = nums[right]
             freq[num] = freq.get(num, 0) + 1
             current_sum += num
