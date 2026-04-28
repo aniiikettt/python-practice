@@ -12,3 +12,12 @@ class Solution:
             num = nums[right]
             freq[num] = freq.get(num, 0) + 1
             current_sum += num
+
+            # Step 2: If window size exceeds k, shrink from left
+            if right - left + 1 > k:
+                left_num = nums[left]
+                freq[left_num] -= 1
+                if freq[left_num] == 0:
+                    del freq[left_num]    # Clean up zero counts
+                current_sum -= left_num
+                left += 1
