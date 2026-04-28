@@ -5,3 +5,10 @@ class Solution:
         current_sum = 0    # Sum of current window
         max_sum = 0        # Best valid sum found
         left = 0           # Left boundary of windowclass Solution:
+
+        for right in range(len(nums)):
+            
+            # Step 1: Add new right element to window
+            num = nums[right]
+            freq[num] = freq.get(num, 0) + 1
+            current_sum += num
