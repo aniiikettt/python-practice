@@ -10,3 +10,11 @@ class Solution:
             # Step 1: Add right fruit to basket
             fruit = fruits[right]
             basket[fruit] = basket.get(fruit, 0) + 1
+
+             # Step 2: More than 2 types → shrink from left
+            while len(basket) > 2:
+                left_fruit = fruits[left]
+                basket[left_fruit] -= 1
+                if basket[left_fruit] == 0:
+                    del basket[left_fruit]   # Remove type from basket
+                left += 1
