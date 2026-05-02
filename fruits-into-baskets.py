@@ -1,4 +1,5 @@
 class Solution:
+    from typing import List
     def totalFruit(self, fruits: List[int]) -> int:
         
         basket = {}      # fruit_type → count in window
