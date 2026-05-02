@@ -18,3 +18,8 @@ class Solution:
                 if basket[left_fruit] == 0:
                     del basket[left_fruit]   # Remove type from basket
                 left += 1
+
+             # Step 3: Valid window → update max
+            max_fruits = max(max_fruits, right - left + 1)
+
+        return max_fruits
