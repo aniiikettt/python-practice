@@ -1,4 +1,5 @@
 class Solution:
+    from typing import List
     def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
         
         # Edge case: k <= 1 means no product can be < k
