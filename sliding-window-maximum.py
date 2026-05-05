@@ -12,3 +12,8 @@ class Solution:
             # (index no longer in window [right-k+1 ... right])
             if dq and dq[0] < right - k + 1:
                 dq.popleft()
+
+             # Step 2: Remove USELESS indices from back
+            # (values smaller than current → will never be max)
+            while dq and nums[dq[-1]] <= nums[right]:
+                dq.pop()
