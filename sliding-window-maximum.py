@@ -17,3 +17,12 @@ class Solution:
             # (values smaller than current → will never be max)
             while dq and nums[dq[-1]] <= nums[right]:
                 dq.pop()
+
+            # Step 3: Add current index to back
+            dq.append(right)
+
+            # Step 4: Window is full → record maximum
+            if right >= k - 1:
+                result.append(nums[dq[0]])  # Front = max
+
+        return result
