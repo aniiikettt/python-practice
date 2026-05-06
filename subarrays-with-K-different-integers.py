@@ -20,3 +20,11 @@ class Solution:
                     if freq[left_num] == 0:
                         del freq[left_num]
                     left += 1
+
+                # All subarrays ending at right in this window
+                count += right - left + 1
+
+            return count
+
+        # Magic formula!
+        return at_most(k) - at_most(k - 1)
