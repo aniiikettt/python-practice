@@ -1,4 +1,5 @@
 class Solution:
+    from typing import List
     def subarraysWithKDistinct(self, nums: List[int], k: int) -> int:
         
         def at_most(k):
