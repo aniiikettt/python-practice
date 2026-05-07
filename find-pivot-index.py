@@ -1,4 +1,5 @@
 class Solution:
+    from typing import List
     def pivotIndex(self, nums: List[int]) -> int:
 
         total = sum(nums)
