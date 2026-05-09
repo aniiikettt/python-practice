@@ -15,4 +15,6 @@ class Solution:
 
             seen[prefix] = seen.get(prefix, 0) + 1
 
+        return count
+
 
