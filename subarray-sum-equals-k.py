@@ -11,3 +11,8 @@ class Solution:
 
             prefix += num
 
+            count += seen.get(prefix - k, 0)
+
+            seen[prefix] = seen.get(prefix, 0) + 1
+
+
