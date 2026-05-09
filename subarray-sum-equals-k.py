@@ -6,3 +6,8 @@ class Solution:
         
         prefix = 0
         count = 0
+
+        for num in nums:
+
+            prefix += num
+
