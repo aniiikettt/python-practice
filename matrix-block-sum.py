@@ -13,7 +13,7 @@ class Solution:
                               - prefix[i-1][j-1]) # remove overlap
                 
         def rect_sum(r1, c1, r2, c2):
-            # Convert to 1-indexed prefix coordinates
+            
             r2, c2 = r2 + 1, c2 + 1
             return (prefix[r2][c2]
                   - prefix[r1][c2]    # remove top
@@ -23,7 +23,7 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-                # Clamp block boundaries within matrix
+               
                 r1 = max(0, i - k)
                 c1 = max(0, j - k)
                 r2 = min(m - 1, i + k)
