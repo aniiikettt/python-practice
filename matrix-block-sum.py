@@ -11,3 +11,11 @@ class Solution:
                               + prefix[i-1][j]    # top
                               + prefix[i][j-1]    # left
                               - prefix[i-1][j-1]) # remove overlap
+                
+        def rect_sum(r1, c1, r2, c2):
+            # Convert to 1-indexed prefix coordinates
+            r2, c2 = r2 + 1, c2 + 1
+            return (prefix[r2][c2]
+                  - prefix[r1][c2]    # remove top
+                  - prefix[r2][c1]    # remove left
+                  + prefix[r1][c1])   # add back corner
