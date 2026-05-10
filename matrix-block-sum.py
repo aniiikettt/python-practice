@@ -29,3 +29,5 @@ class Solution:
                 r2 = min(m - 1, i + k)
                 c2 = min(n - 1, j + k)
                 answer[i][j] = rect_sum(r1, c1, r2, c2)
+
+        return answer
