@@ -19,3 +19,4 @@ class Solution:
                   - prefix[r1][c2]    # remove top
                   - prefix[r2][c1]    # remove left
                   + prefix[r1][c1])   # add back corner
+        answer = [[0] * n for _ in range(m)]
