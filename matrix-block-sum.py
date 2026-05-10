@@ -20,3 +20,12 @@ class Solution:
                   - prefix[r2][c1]    # remove left
                   + prefix[r1][c1])   # add back corner
         answer = [[0] * n for _ in range(m)]
+
+        for i in range(m):
+            for j in range(n):
+                # Clamp block boundaries within matrix
+                r1 = max(0, i - k)
+                c1 = max(0, j - k)
+                r2 = min(m - 1, i + k)
+                c2 = min(n - 1, j + k)
+                answer[i][j] = rect_sum(r1, c1, r2, c2)
