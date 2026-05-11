@@ -1,4 +1,5 @@
 class Solution:
+    from typing import List
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 
         n = len(nums)
